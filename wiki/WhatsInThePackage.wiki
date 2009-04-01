@@ -10,7 +10,7 @@ You can start by either checking out the code from subversion, or download the z
 
 All you need is a machine that can host a .NET (2.0 or higher) web site, so any XP machine with IIS will do.
 
-The code itself can be added using your favorite editor, but it was written with Visual Studio in mind. 
+The code itself can be edited using your favorite editor, but it was written with Visual Studio in mind. 
 
 If you're new to Visual Studio, download the free [http://www.microsoft.com/express/vwd/ Visual Web Developer SP1]. When using VWD, be aware that the solution file provided by the q42multiplayer zipfile (Demo.sln) requires Service Pack 1 of Visual Studio.
 
@@ -28,6 +28,9 @@ When you open a browser and surf to the demo website's url (usually http://local
  1. Enter a name and press join.
  1. Open up a new browser tab and do the same.
  1. Chat with eachother.
- 1. By closing a tab, you'll see the user disconnect.
- 1. By typing "room myroom" you'll enter a newly created virtual room called "myroom", or any other name you specified. This demonstrates the use of rooms.
+ 1. By typing "room anyname" you'll enter a newly created virtual room called "anyname", or any other name you specified. This demonstrates the use of rooms.
  1. To keep track of rooms and users, surf to Status.aspx.
+ 1. By closing a tab, you'll see the user disconnect.
+
+= The demo code =
+The demo project has its own server implemented in the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/app_code/ChatServer.cs app_code/ChatServer.cs] file.
