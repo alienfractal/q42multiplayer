@@ -42,7 +42,7 @@ It implements the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Q
  * name = "name"
  * value = "John"
 
-In the !ValidateProperty method you can decide -for your application purposes-
+In the !ValidateProperty method you can decide, for your application purposes:
 
  * If the give propertyName is allowed or not (if not, return null). So, this is the way to define what properties and events are used in your application.
  * If the value for the given propertyName is allowed. If not, return null. If you want its value to be altered (for profanity filtering for instance), this is where to implement it.
