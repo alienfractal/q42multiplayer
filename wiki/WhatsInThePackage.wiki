@@ -33,4 +33,6 @@ When you open a browser and surf to the demo website's url (usually http://local
  1. By closing a tab, you'll see the user disconnect.
 
 = The demo code =
-The demo project has its own server implemented in the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/app_code/ChatServer.cs app_code/ChatServer.cs] file.
+The demo project has its own server implemented in the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/app_code/ChatServer.cs app_code/ChatServer.cs] file. Its implementation is pretty straightforward. 
+
+It implements the Q42.Wheels.Multiplayer.Server abstract class. The one method that needs explaining is ValidateProperty
