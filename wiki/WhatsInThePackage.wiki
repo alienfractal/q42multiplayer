@@ -21,4 +21,13 @@ You see two folders:
  1. Demo (the Demo website, a simple chat application)
  1. Q42.Wheels.Multiplayer (the source code)
 
-And a solution file. Double click it to open up Visual Studio. You can simply run the debug server by pressing F5, or set up IIS to start the demo website, if you know how to do that.
+And the solution file (Demo.sln). Double click it to open up Visual Studio. You can run the demo website by simply pressing F5, or set up IIS to start the demo website as you see fit.
+
+When you open a browser and surf to the demo website's url (usually http://localhost:SOMEPORT/Demo), you'll see the login page.
+
+ 1. Enter a name and press join.
+ 1. Open up a new browser tab and do the same.
+ 1. Chat with eachother.
+ 1. By closing a tab, you'll see the user disconnect.
+ 1. By typing "room myroom" you'll enter a newly created virtual room called "myroom", or any other name you specified. This demonstrates the use of rooms.
+ 1. To keep track of rooms and users, surf to Status.aspx.
