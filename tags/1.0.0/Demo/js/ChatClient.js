@@ -6,7 +6,7 @@ var ChatClient =
     ChatClient.name = document.getElementById("name").value;
     document.getElementById("joinForm").style.display = "none";
     document.getElementById("chat").style.display = "block";
-    Multiplayer.init("/ping.aspx", 2000, ChatClient.handleEvent, { "name": true, "say": false });
+    Multiplayer.init("ping.aspx", 2000, ChatClient.handleEvent, { "name": true, "say": false });
     var roomName = document.location.search.replace(/.*?room=(.*)/g, '$1');
     roomName = (roomName == document.location.search) ? 0 : roomName;
     Multiplayer.connect({ "name": ChatClient.name }, roomName);
