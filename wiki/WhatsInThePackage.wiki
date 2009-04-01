@@ -35,4 +35,13 @@ When you open a browser and surf to the demo website's url (usually http://local
 = The demo code =
 The demo project has its own server implemented in the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/app_code/ChatServer.cs app_code/ChatServer.cs] file. Its implementation is pretty straightforward. 
 
-It implements the Q42.Wheels.Multiplayer.Server abstract class. The one method that needs explaining is ValidateProperty
+It implements the Q42.Wheels.Multiplayer.Server abstract class. The one method that needs explaining is !ValidateProperty. This is the single method that all user changes get by. If a user tries to set its name to "John", its arguments will be:
+
+ * name = "name"
+ * value = "John"
+
+In the !ValidateProperty method you can decide -for your application purposes-
+
+ * If the give propertyName is allowed or not (if not, return null). So, this is the way to define what properties and events are used in your application.
+ * If the value for the given propertyName is allowed. If not, return null. If you want its value to be altered (for profanity filtering for instance), this is where to implement it.
+ * If the give property name/value pair is persistent or not. This is set by the last boolean parameter in the {{{new Property(name, value, true);}}} object that is returned. True is persistent, false is not.
