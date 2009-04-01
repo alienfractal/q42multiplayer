@@ -68,7 +68,7 @@ Our chat app loads two javascript files.
  1. [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/js/Multiplayer.js Multiplayer.js] - The generic Multiplayer client library.
  1. [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/js/ChatClient.js ChatClient.js] - The application-specific logic.
 
-Comments in the Multiplayer.js file are written with Visual Studio 2008 intellisense in mind, so you should get full intellisense thanks to the {{{/// <reference path="Multiplayer.js" />}}} line in the ChatClient.js file.
+Comments in the Multiplayer.js file are written with Visual Studio 2008 intellisense in mind, so you should get full intellisense thanks to the {{{/// <reference path="Multiplayer.js" />}}} line in the !ChatClient.js file.
 
 Upon joining, the !ChatClient.join method calls Multiplayer.init, and tells it the ping url, the interval at which to ping, the event handler that takes care of business and what persistent properties and non-persistent events are possible.
 
