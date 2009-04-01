@@ -34,10 +34,10 @@ When you open a browser and surf to the demo website's url (usually http://local
 
 = The demo code =
 
-== The custom server implementation ==
+== Custom server implementation ==
 The demo project has its own server implemented in the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/app_code/ChatServer.cs app_code/ChatServer.cs] file. Its implementation is pretty straightforward. 
 
-It implements the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Q42.Wheels.Multiplayer/src/Server.cs Q42.Wheels.Multiplayer.Server] abstract class. The one method that needs explaining is !ValidateProperty. This is the single method that all user changes get by. If a user tries to set its name to "John", its arguments will be:
+It implements the [http://code.google.com/p/q42multiplayer/source/browse/trunk/Q42.Wheels.Multiplayer/src/Server.cs Q42.Wheels.Multiplayer.Server] abstract class. The one method that needs explaining is {{{ValidateProperty}}}. This is the single method that all user changes get by. If a user tries to set its name to "John", its arguments will be:
 
  * name = "name"
  * value = "John"
@@ -47,3 +47,13 @@ In the !ValidateProperty method you can decide, for your application purposes:
  * If the give propertyName is allowed or not (if not, return null). So, this is the way to define what properties and events are used in your application.
  * If the value for the given propertyName is allowed. If not, return null. If you want its value to be altered (for profanity filtering for instance), this is where to implement it.
  * If the give property name/value pair is persistent or not. This is set by the last boolean parameter in the {{{new Property(name, value, true);}}} object that is returned. True is persistent, false is not.
+
+=== Creating the ChatServer instance ===
+For this demonstration, a singleton instance of our little ChatServer is started when the website starts. This is done in [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/Global.asax Global.asax] using the {{{Application_Start}}} event.
+
+To be notified of ending sessions, we call our own CharServer application's {{{OnSessionEnd}}} method in the {{{Session_End}}} event in Global.asax.
+
+=== Handling a user ping ===
+Each user pings the server at a given interval, usually a second or so. Each ping is a call to a url, so for this example we have created ping.aspx, with its code behind [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/ping.aspx.cs here].
+
+In the ping implementation, javascript is written to the client. For your own implementation, copy/paste the part that writes everything to the Response.
