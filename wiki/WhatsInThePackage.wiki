@@ -21,7 +21,4 @@ You see two folders:
  1. Demo (the Demo website, a simple chat application)
  1. Q42.Wheels.Multiplayer (the source code)
 
-And a solution file. Double click it to open up Visual Studio.
-Also, make sure that your default website on your own machine's IIS has its http root directory pointing to the Demo folder.
-
-When surfing to http://localhost, you should see 
+And a solution file. Double click it to open up Visual Studio. You can simply run the debug server by pressing F5, or set up IIS to start the demo website, if you know how to do that.
