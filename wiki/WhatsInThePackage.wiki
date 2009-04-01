@@ -1,3 +1,5 @@
+#summary Quick overview of what's in the zipfile and how to start building your own multiuser application.
+
 = What's in the package? =
 
 Thank you for your interest in the q42multiplayer engine. This documentation will help you understand the basisc of what you need to do in order to get your own multiuser application up and running.
