@@ -50,9 +50,9 @@ In the !ValidateProperty method you can decide, for your application purposes:
  * If the give property name/value pair is persistent or not. This is set by the last boolean parameter in the {{{new Property(name, value, true);}}} object that is returned. True is persistent, false is not.
 
 === Creating the !ChatServer instance ===
-For this demonstration, a singleton instance of our little ChatServer is started when the website starts. This is done in [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/Global.asax Global.asax] using the {{{Application_Start}}} event.
+For this demonstration, a singleton instance of our little !ChatServer is started when the website starts. This is done in [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/Global.asax Global.asax] using the {{{Application_Start}}} event.
 
-To be notified of ending sessions, we call our own CharServer application's {{{OnSessionEnd}}} method in the {{{Session_End}}} event in Global.asax.
+To be notified of ending sessions, we call our own !CharServer application's {{{OnSessionEnd}}} method in the {{{Session_End}}} event in Global.asax.
 
 === Handling a user ping ===
 Each user pings the server at a given interval, usually a second or so. Each ping is a call to a url, so for this example we have created ping.aspx, with its code behind [http://code.google.com/p/q42multiplayer/source/browse/trunk/Demo/ping.aspx.cs here].
@@ -70,9 +70,9 @@ Our chat app loads two javascript files.
 
 Comments in the Multiplayer.js file are written with Visual Studio 2008 intellisense in mind, so you should get full intellisense thanks to the {{{/// <reference path="Multiplayer.js" />}}} line in the ChatClient.js file.
 
-Upon joining, the ChatClient.join method calls Multiplayer.init, and tells it the ping url, the interval at which to ping, the event handler that takes care of business and what persistent properties and non-persistent events are possible.
+Upon joining, the !ChatClient.join method calls Multiplayer.init, and tells it the ping url, the interval at which to ping, the event handler that takes care of business and what persistent properties and non-persistent events are possible.
 
-The ChatClient.handleEvent method is the single point of interest where all user property-changes and event come in. This is where an application should take care of changes, keep track of new users, or those that disconnect or change rooms.
+The !ChatClient.handleEvent method is the single point of interest where all user property-changes and event come in. This is where an application should take care of changes, keep track of new users, or those that disconnect or change rooms.
 
 The rest should speak for itself.
 
