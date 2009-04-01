@@ -1,7 +1,7 @@
 ﻿<html>
   <head>
-    <script src="/js/Multiplayer.js"></script>
-    <script src="/js/ChatClient.js"></script>
+    <script src="js/Multiplayer.js"></script>
+    <script src="js/ChatClient.js"></script>
     <style>
     #log {
       width: 400px; height: 200px;
