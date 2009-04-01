@@ -1,11 +1,25 @@
-#summary Description of what's in the package
-
-= Introduction =
+= What's in the package? =
 
 Thank you for your interest in the q42multiplayer engine. This documentation will help you understand the basisc of what you need to do in order to get your own multiuser application up and running.
+
+You can start by either checking out the code from subversion, or download the zipfile.
 
 = Requirements =
 
 All you need is a machine that can host a .NET (2.0 or higher) web site, so any XP machine with IIS will do.
 
-The code itself can be added using your favorite editor, but it was written with Visual Studio in mind. You can download the free [http://www.microsoft.com/express/vwd/ Visual Web Developer SP1] if you want. When using VWD, be sure that the solution file (Demo.sln) provided by in the q42multiplayer zip file requires VWD SP1.
+The code itself can be added using your favorite editor, but it was written with Visual Studio in mind. 
+
+If you're new to Visual Studio, download the free [http://www.microsoft.com/express/vwd/ Visual Web Developer SP1]. When using VWD, be aware that the solution file provided by the q42multiplayer zipfile (Demo.sln) requires Service Pack 1 of Visual Studio.
+
+= After unzipping =
+
+You see two folders:
+
+ 1. Demo (the Demo website, a simple chat application)
+ 1. Q42.Wheels.Multiplayer (the source code)
+
+And a solution file. Double click it to open up Visual Studio.
+Also, make sure that your default website on your own machine's IIS has its http root directory pointing to the Demo folder.
+
+When surfing to http://localhost, you should see 
