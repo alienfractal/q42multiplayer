@@ -1,0 +1,11 @@
+#summary Description of what's in the package
+
+= Introduction =
+
+Thank you for your interest in the q42multiplayer engine. This documentation will help you understand the basisc of what you need to do in order to get your own multiuser application up and running.
+
+= Requirements =
+
+All you need is a machine that can host a .NET (2.0 or higher) web site, so any XP machine with IIS will do.
+
+The code itself can be added using your favorite editor, but it was written with Visual Studio in mind. You can download the free [http://www.microsoft.com/express/vwd/ Visual Web Developer SP1] if you want. When using VWD, be sure that the solution file (Demo.sln) provided by in the q42multiplayer zip file requires VWD SP1.
